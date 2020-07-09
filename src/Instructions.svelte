@@ -62,6 +62,6 @@
     <div class='instruction-text bold'>{$goal$.name}</div>
   </div>
   <div class='image-container'>
-    <img width='100%' alt='Town Center' src='/htkaoe2/images/town_center.png' />
+    <img width='100%' alt='Town Center' src={process.env.publicPath + 'images/town_center.png'} />
   </div>
 </div>

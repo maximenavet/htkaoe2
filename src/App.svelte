@@ -42,7 +42,9 @@
   
   delayedComboEnd$.subscribe(() => {
 		goal$.next(getRandomGoal());
-	})
+  })
+  
+  console.log(process.env.publicPath);
 
 
   function handleKeydown(event) {

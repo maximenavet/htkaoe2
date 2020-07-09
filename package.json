@@ -4,13 +4,16 @@
   "scripts": {
     "build": "rollup -c",
     "dev": "rollup -c -w",
-    "start": "sirv public",
-    "deploy": "rm -rf node_modules/.cache && npm run build && touch public/.nojekyll && git add public/build && git commit -m \"Deploy to gh-pages\" && git subtree push --prefix public/ origin gh-pages"
+    "start": "sirv build",
+    "deploy": "rm -rf node_modules/.cache && npm run build && touch build/.nojekyll && git add build && git commit -m \"Deploy to gh-pages\" && git subtree push --prefix build/ origin gh-pages"
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^12.0.0",
+    "@rollup/plugin-html": "^0.2.0",
     "@rollup/plugin-node-resolve": "^8.0.0",
+    "@rollup/plugin-replace": "^2.3.3",
     "rollup": "^2.3.4",
+    "rollup-plugin-copy": "^3.3.0",
     "rollup-plugin-livereload": "^1.0.0",
     "rollup-plugin-node-polyfills": "^0.2.1",
     "rollup-plugin-svelte": "^5.0.3",
