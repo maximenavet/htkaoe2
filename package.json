@@ -4,7 +4,8 @@
   "scripts": {
     "build": "rollup -c",
     "dev": "rollup -c -w",
-    "start": "sirv public"
+    "start": "sirv public",
+    "deploy": "rm -rf node_modules/.cache && npm run build && touch public/.nojekyll && git add public/build && git commit -m \"Deploy to gh-pages\" && git subtree push --prefix public/ origin gh-pages"
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^12.0.0",
